@@ -117,8 +117,8 @@ def run_sequence(psu_instance):
     psu_inst.show_error_msgs_list()
 
 # Serial connected internal in psu. Lim 60 V and 3 A
-# Use ch1(master) + for positive terminal, ch2(slave) - for negative terminal
-# For +/- connection, use ch1(master) - for ground potential
+# Use ch1(main) + for positive terminal, ch2(subordinate) - for negative terminal
+# For +/- connection, use ch1(main) - for ground potential
 def use_serial_con_psu(psu_instance):
     # Disable output and set to seriel connection
     psu_instance.output_status(dis_output)
@@ -141,7 +141,7 @@ def use_serial_con_psu(psu_instance):
     psu_inst.show_error_msgs_list()
 
 # Parallel connected internal in psu. Lim 30 V and 6 A
-# Use ch1(master) terminals
+# Use ch1(main) terminals
 def use_para_con_psu(psu_instance):
     # Disable output and set to parallel connection
     psu_instance.output_status(dis_output)
